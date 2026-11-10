@@ -16,6 +16,7 @@
     "last 2 Edge versions"
   ],
   "devDependencies": {
+    "@awmottaz/prettier-plugin-void-html": "^2.3.0",
     "autoprefixer": "^10.6.2",
     "postcss": "^8.5.32",
     "prettier": "^3.9.10",
