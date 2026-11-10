@@ -1,0 +1,5 @@
+@use "./_variables" as *;
+@use "./_mixins" as *;
+
+* { box-sizing: border-box;
+    margin: 0; padding: 0; }
