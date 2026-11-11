@@ -1,0 +1,16 @@
+@use '../global/_variables' as *;
+
+.currency {
+    &__wrapper {
+        min-width: 600px;
+        width: 100%;
+    }
+    &__heading {
+        font-weight: $fw-bold;
+        font-size: 22px;
+        line-height: 20.57px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        margin-bottom: 42px;
+    }
+}

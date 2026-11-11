@@ -1,0 +1,61 @@
+@use '../global/_variables' as *;
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: auto;
+    border: 1px solid $color-slate-300;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(118px, auto)) repeat(2, minmax(298px, auto));
+
+    &__header {
+        display: contents;
+    }
+
+    &__header tr {
+        background-color: $color-slate-100;
+    }
+
+    &__body {
+        display: contents;
+    }
+
+    &__header th {
+        color: $color-black;
+        font-family: $ff-base;
+        font-weight: $fw-semibold;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 0%;
+    }
+
+    &__tr {
+        display: grid;
+        grid-column: 1 / -1;
+        grid-template-columns: subgrid;
+        padding: 22px 24px 21px 24px;
+        border-bottom: 1px solid $color-slate-300;
+    }
+
+    &__th,
+    &__td {
+        padding-left: 20px;
+
+        vertical-align: middle;
+        text-align: left;
+    }
+
+    &__th:first-child,
+    &__td:first-child {
+        padding-left: 0;
+    }
+
+    &__td {
+        font-family: $ff-base;
+        font-weight: $fw-regular;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 0%;
+    }
+}

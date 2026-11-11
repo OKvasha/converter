@@ -1,6 +1,7 @@
 @use '../global/_variables' as *;
 
 .converter {
+    margin-bottom: 61px;
     &__heading {
         font-weight: $fw-bold;
         font-size: 22px;
