@@ -1,0 +1,29 @@
+{
+  "D:\\SkillBox\\FrontEnd\\converter\\src\\assets\\fonts\\OpenSans-Bold.ttf": {
+    "hash": "6bbd5cf43b71e9b0189b2de47ac42950",
+    "metadata": {
+      "family": "Open Sans",
+      "weight": 700,
+      "style": "normal",
+      "isVariable": false
+    }
+  },
+  "D:\\SkillBox\\FrontEnd\\converter\\src\\assets\\fonts\\OpenSans-Regular.ttf": {
+    "hash": "94d168f74b7dd50963fd44fe697d6f3e",
+    "metadata": {
+      "family": "Open Sans",
+      "weight": 400,
+      "style": "normal",
+      "isVariable": false
+    }
+  },
+  "D:\\SkillBox\\FrontEnd\\converter\\src\\assets\\fonts\\OpenSans-SemiBold.ttf": {
+    "hash": "ebebb4b54355687d59886f3e6f1694b3",
+    "metadata": {
+      "family": "Open Sans",
+      "weight": 600,
+      "style": "normal",
+      "isVariable": false
+    }
+  }
+}

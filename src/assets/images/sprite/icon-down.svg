@@ -1,0 +1,7 @@
+<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_202_479" fill="white">
+<path d="M0 0H56C58.2091 0 60 1.79086 60 4V36C60 38.2091 58.2091 40 56 40H0V0Z"/>
+</mask>
+<path d="M0 -1H56C58.7614 -1 61 1.23858 61 4H59C59 2.34315 57.6569 1 56 1H0V-1ZM61 36C61 38.7614 58.7614 41 56 41H0V39H56C57.6569 39 59 37.6569 59 36H61ZM0 40V0V40ZM56 -1C58.7614 -1 61 1.23858 61 4V36C61 38.7614 58.7614 41 56 41V39C57.6569 39 59 37.6569 59 36V4C59 2.34315 57.6569 1 56 1V-1Z" fill="#C0CAD6" mask="url(#path-1-inside-1_202_479)"/>
+<path d="M24 17L30 23L36 17" stroke-linecap="round" stroke="black"/>
+</svg>

@@ -1,13 +1,58 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>converter</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>converter</title>
+        <link rel="preload" href="/fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    </head>
+    <body>
+        <main>
+            <section class="converter">
+                <div class="container">
+                    <h1 class="converter__heading">Конвертер валют</h1>
+                    <form class="converter__form form" action="#">
+                        <div class="form__wrapper">
+                            <fieldset class="form__fieldset">
+                                <label class="form__label" for="selectIn">У меня имеется</label>
+                                <select class="form__select" name="selectIn" id="selectIn">
+                                    <option value="RUR">Российский рубль RUR</option>
+                                </select>
+                                <input
+                                    class="form__input"
+                                    type="number"
+                                    name="inputIn"
+                                    id="inputIn"
+                                    placeholder="5 000"
+                                >
+                            </fieldset>
+                            <fieldset class="form__fieldset">
+                                <label class="form__label" for="selectOut">Хочу приобрести</label>
+                                <select class="form__select" name="selectOut" id="selectOut">
+                                    <option value="EUR">Евро EUR</option>
+                                </select>
+                                <input
+                                    class="form__input"
+                                    type="number"
+                                    name="inputOut"
+                                    id="inputOut"
+                                    placeholder="60.5746"
+                                >
+                            </fieldset>
+                            <button class="form__button">
+                                <svg class="form__button-icon" width="50" height="55">
+                                    <use href="__spritemap#sprite-icon-arrows"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="currency"></section>
+        </main>
+        <script type="module" src="/src/main.js"></script>
+    </body>
 </html>

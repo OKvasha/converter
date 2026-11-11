@@ -1,9 +1,20 @@
-import { defineConfig } from "vite"
+import { defineConfig } from 'vite'
+import ViteFontsAutoPlugin from 'vite-plugin-fonts-auto'
+import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap'
+
 export default defineConfig({
-    // Имя репозитория на GitHub — критично для GitHub Pages!
-    base: "/converter/",
+    base: '/converter/',
     build: {
-        outDir: "dist",
-        assetsDir: "assets",
+        outDir: 'dist',
+        assetsDir: 'assets',
     },
+    plugins: [
+        ViteFontsAutoPlugin({
+            destDir: 'src/assets/fonts',
+            preload: false,
+            logs: true,
+            strict: true,
+        }),
+        VitePluginSvgSpritemap('./src/assets/images/sprite/*.svg'),
+    ],
 })

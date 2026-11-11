@@ -1,0 +1,77 @@
+@use '../global/_variables' as *;
+
+.form {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 180px;
+        position: relative;
+    }
+
+    &__fieldset {
+        padding: 9px 0 62px 0;
+        //width: 100%;
+        border: unset;
+        display: grid;
+        gap: 16px;
+    }
+
+    &__label {
+        font-weight: $fw-regular;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 0%;
+        color: $color-slate-500;
+    }
+
+    &__select {
+        font-family: $ff-base;
+        max-width: 380px;
+        margin-bottom: 8px;
+        padding: 12px 60px 12px 10px;
+        font-weight: $fw-regular;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0%;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+        background-color: $color-ocean-500;
+        color: $color-white;
+        border: 1px solid $color-slate-300;
+        border-radius: 4px;
+        position: relative;
+        cursor: pointer;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        background:
+            url('../../assets/images/sprite/icon-down.svg') no-repeat right center / 60px 40px,
+            linear-gradient(to left, $color-white 60px, transparent 60px) $color-ocean-500;
+    }
+
+    &__input {
+        font-family: $ff-base;
+        max-width: 380px;
+        font-weight: $fw-bold;
+        font-size: 44px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        color: $color-black;
+        padding: 23px 24px 51px 24px;
+        border: 1px solid $color-slate-300;
+        border-radius: 2px;
+    }
+
+    &__button {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 100px;
+        background: unset;
+        border: unset;
+    }
+}

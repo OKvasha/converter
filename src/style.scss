@@ -1,8 +1,9 @@
 /* Global */
-@use "scss/global/_fonts";        // @font-face — только CSS, без as *
-@use "scss/global/_reboot";       // сам подключит _variables и _mixins
-@use "scss/global/_container";
+@use 'scss/global/_fonts';
+@use 'scss/global/_reboot';
+@use 'scss/global/_container';
 
 /* Blocks */
-@use "scss/blocks/_header";
-@use "scss/blocks/_footer";
+@use 'scss/blocks/_converter';
+@use 'scss/blocks/_form';
+@use 'scss/blocks/_footer';

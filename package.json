@@ -17,10 +17,12 @@
   ],
   "devDependencies": {
     "@awmottaz/prettier-plugin-void-html": "^2.3.0",
+    "@spiriit/vite-plugin-svg-spritemap": "^7.2.0",
     "autoprefixer": "^10.6.2",
     "postcss": "^8.5.32",
     "prettier": "^3.9.10",
     "sass": "^1.108.1",
-    "vite": "^8.3.6"
+    "vite": "^8.3.6",
+    "vite-plugin-fonts-auto": "^1.2.1"
   }
 }
