@@ -8,7 +8,7 @@ export default function renderTable(data, tableBody) {
         const tdNameEl = getEl('td', 'table__td', row.name)
         const tdRateEl = getEl('td', 'table__td', row.rate)
         const spanEl = getEl('span', 'table__flag')
-        const svgEl = getSvgEl('table__flag-icon', 27, 20, `__spritemap#sprite-${row.code.toUpperCase()}`)
+        const svgEl = getSvgEl('table__flag-icon', 27, 20, `/__spritemap#sprite-${row.code.toUpperCase()}`)
 
         spanEl.append(svgEl, row.code)
         tdIconEl.append(spanEl)
