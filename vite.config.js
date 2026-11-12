@@ -12,6 +12,7 @@ export default defineConfig({
         ViteFontsAutoPlugin({
             destDir: 'src/assets/fonts',
             preload: false,
+            includeCss: false,
             logs: true,
             strict: true,
         }),
