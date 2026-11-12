@@ -58,4 +58,10 @@
         line-height: 16px;
         letter-spacing: 0%;
     }
+
+    &__flag {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 }

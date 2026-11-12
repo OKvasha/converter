@@ -53,7 +53,7 @@
             </section>
             <section class="currency">
                 <div class="container">
-                    <h2 class="currency__heading">Курсы валют на 22.03.2023</h2>
+                    <h2 class="currency__heading">Курсы валют на <span class="currency__date"></span></h2>
                     <div class="currency__wrapper">
                         <table class="currency__table table">
                             <thead class="table__header">
@@ -64,21 +64,7 @@
                                     <th class="table__th">Курс базовой валюты</th>
                                 </tr>
                             </thead>
-                            <tbody class="table__body">
-                                <tr class="table__tr">
-                                    <td class="table__td">
-                                        <span style="display: inline-flex; align-items: center; gap: 8px">
-                                            <svg class="icon" width="27" height="20">
-                                                <use href="__spritemap#sprite-icon-usd"></use>
-                                            </svg>
-                                            USD
-                                        </span>
-                                    </td>
-                                    <td class="table__td">1</td>
-                                    <td class="table__td">Доллар США</td>
-                                    <td class="table__td">76.8373</td>
-                                </tr>
-                            </tbody>
+                            <tbody class="table__body" id="tableBody"></tbody>
                         </table>
                     </div>
                 </div>
