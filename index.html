@@ -16,27 +16,22 @@
                             <fieldset class="form__fieldset">
                                 <label class="form__label" for="selectIn">У меня имеется</label>
                                 <select class="form__select" name="selectIn" id="selectIn">
-                                    <option value="RUR">Российский рубль RUR</option>
+                                    <option value="">Выберите валюту</option>
                                 </select>
-                                <input
-                                    class="form__input"
-                                    type="number"
-                                    name="inputIn"
-                                    id="inputIn"
-                                    placeholder="5 000"
-                                >
+                                <input class="form__input" type="number" name="inputIn" id="inputIn" placeholder="0">
                             </fieldset>
                             <fieldset class="form__fieldset">
                                 <label class="form__label" for="selectOut">Хочу приобрести</label>
                                 <select class="form__select" name="selectOut" id="selectOut">
-                                    <option value="EUR">Евро EUR</option>
+                                    <option value="0">Выберите валюту</option>
                                 </select>
                                 <input
                                     class="form__input"
                                     type="number"
                                     name="inputOut"
                                     id="inputOut"
-                                    placeholder="60.5746"
+                                    placeholder="0"
+                                    disabled
                                 >
                             </fieldset>
                             <button class="form__button">

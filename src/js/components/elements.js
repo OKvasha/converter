@@ -27,6 +27,14 @@ function getInputEl(type, name, classEl, placeholder, value, required = true) {
     return inputEl
 }
 
+function getSelectEl(valueArr, classEl) {
+    const selectEl = getEl('select', classEl)
+    valueArr.forEach((option) => {
+        selectEl.add(new Option(option.value, option.key))
+    })
+    return selectEl
+}
+
 function getLink(classLink, href, text) {
     const linkEl = getEl('a', classLink, text)
     linkEl.setAttribute('href', href)
@@ -67,4 +75,4 @@ function getButtonEl(type, classBtn, text, ariaLabel) {
     return buttonEl
 }
 
-export { getEl, getInputEl, getButtonEl, getImgEl, getSvgEl, getLink }
+export { getEl, getInputEl, getButtonEl, getImgEl, getSvgEl, getLink, getSelectEl }

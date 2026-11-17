@@ -6,12 +6,23 @@ export default function prepareData(raw) {
     const year = d.getFullYear()
     const dateFormatted = `${day}.${month}.${year}`
 
-    const rows = Object.values(raw.Valute ?? {}).map((item) => ({
-        code: item.CharCode,
-        name: item.Name,
-        unit: item.Nominal ?? 1,
-        rate: Number(item.Value),
-    }))
+    const rows = Object.values(raw.Valute ?? {}).reduce((result, item) => {
+        result[item.CharCode] = {
+            code: item.CharCode,
+            name: item.Name,
+            unit: item.Nominal ?? 1,
+            rate: Number(item.Value),
+        }
+        return result
+    }, {})
+
+    // Рубль — базовая валюта, его в ответе ЦБ нет, поэтому достраиваем сами
+    rows.RUB = {
+        code: 'RUB',
+        name: 'Российский рубль',
+        unit: 1,
+        rate: 1,
+    }
 
     return [rows, dateFormatted]
 }
