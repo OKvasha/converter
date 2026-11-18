@@ -6,6 +6,7 @@
     border-spacing: 0;
     table-layout: auto;
     border: 1px solid $color-slate-300;
+    border-bottom: 0;
     display: grid;
     grid-template-columns: repeat(2, minmax(118px, auto)) repeat(2, minmax(298px, auto));
 
