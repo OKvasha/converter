@@ -1,9 +1,12 @@
 import convert from '../utils/convert'
 
-export default function updateResult(currencyData, selectInEl, selectOutEl, inputInEl, inputOutEl) {
-    const amount = Number(inputInEl.value)
-    const from = selectInEl.value
-    const to = selectOutEl.value
+export default function updateResult(currencyData) {
+    const amount = Number(document.querySelector('#inputIn').value)
+
+    const from = document.querySelector('#selectInValue').value
+    const to = document.querySelector('#selectOutValue').value
+
+    const inputOutEl = document.querySelector('#inputOut')
 
     // Проверка валидности
     if (!from || !to || Number.isNaN(amount) || amount < 0) {

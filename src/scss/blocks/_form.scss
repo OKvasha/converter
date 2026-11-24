@@ -10,7 +10,6 @@
 
     &__fieldset {
         padding: 9px 0 62px 0;
-        //width: 100%;
         border: unset;
         display: grid;
         gap: 16px;
@@ -25,6 +24,117 @@
     }
 
     &__select {
+        position: relative;
+        max-width: 380px;
+        margin-bottom: 8px;
+        font-family: $ff-base;
+        font-weight: $fw-regular;
+
+        &-toggle {
+            width: 100%;
+            padding: 12px 60px 12px 10px;
+            font-family: $ff-base;
+            font-weight: $fw-regular;
+            font-size: 14px;
+            line-height: 14px;
+            letter-spacing: 0;
+            text-align: center;
+            text-transform: uppercase;
+            color: $color-white;
+            background:
+                url('../../assets/images/sprite/icon-down.svg') no-repeat right center / 60px 40px,
+                linear-gradient(to left, $color-white 60px, transparent 60px) $color-ocean-500;
+            border: 1px solid $color-slate-300;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:focus-visible {
+                outline: none;
+            }
+
+            // когда список открыт — переворачиваем стрелку
+            .is-open & {
+                background:
+                    url('../../assets/images/sprite/icon-up.svg') no-repeat right center / 60px 40px,
+                    linear-gradient(to left, $color-white 60px, transparent 60px) $color-ocean-500;
+            }
+        }
+
+        // раскрывающийся список
+        &-menu {
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            z-index: 10;
+            margin: 0;
+            padding: 32px;
+            list-style: none;
+            background-color: $color-white;
+            border: 1px solid $color-slate-300;
+            border-radius: 4px;
+            box-shadow: 0px 12px 60px 0px rgba(0, 0, 0, 0.15);
+            display: grid;
+            grid-template-columns: repeat(3, minmax(242px, 1fr));
+            gap: 18px 75px;
+
+            // плавное появление
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4px);
+            transition:
+                opacity 0.15s ease,
+                transform 0.15s ease,
+                visibility 0.15s;
+
+            .is-open & {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+            &--right {
+                left: unset;
+                right: 0;
+            }
+        }
+
+        // пункт списка
+        &-code {
+            font-weight: $fw-bold;
+            font-size: 14px;
+            line-height: 14px;
+            letter-spacing: 0%;
+            text-transform: uppercase;
+            color: $color-black;
+        }
+        &-item {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            gap: 8px;
+            font-size: 14px;
+            line-height: 14px;
+            letter-spacing: 0;
+            color: $color-slate-500;
+            cursor: pointer;
+            transition: background-color 0.15s ease;
+
+            &:hover,
+            &:focus-visible,
+            &:hover .form__select-code,
+            &:focus-visible .form__select-code {
+                color: $color-ocean-500;
+                outline: none;
+            }
+
+            // выбранный пункт
+            &.is-selected,
+            &.is-selected .form__select-code {
+                color: $color-ocean-500;
+            }
+        }
+    }
+
+    /* &__select {
         font-family: $ff-base;
         max-width: 380px;
         margin-bottom: 8px;
@@ -50,7 +160,13 @@
         background:
             url('../../assets/images/sprite/icon-down.svg') no-repeat right center / 60px 40px,
             linear-gradient(to left, $color-white 60px, transparent 60px) $color-ocean-500;
-    }
+
+        &:focus-visible {
+            outline: none;
+        } 
+
+
+    }*/
 
     &__input {
         font-family: $ff-base;
@@ -73,5 +189,6 @@
         bottom: 100px;
         background: unset;
         border: unset;
+        cursor: pointer;
     }
 }

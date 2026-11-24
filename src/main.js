@@ -3,7 +3,9 @@ import fetchData from './js/services/fetchData'
 import prepareData from './js/utils/prepareData'
 import renderTable from './js/components/renderTable'
 import renderSelect from './js/components/renderSelect'
+
 import initEvents from './js/handlers/initEvents'
+import refreshResult from './js/handlers/refreshResult'
 
 async function init() {
     try {
@@ -17,13 +19,14 @@ async function init() {
 
         // заполняем левый селект
         const selectInEl = document.querySelector('#selectIn')
+
         renderSelect(currencyData, selectInEl)
-        selectInEl.value = 'RUB'
+        //selectInEl.value = 'RUB' TODO убрать в рендер
 
         // заполняем правый селект
         const selectOutEl = document.querySelector('#selectOut')
         renderSelect(currencyData, selectOutEl)
-        selectOutEl.value = 'USD'
+        //selectOutEl.value = 'USD' TODO убрать в рендер
 
         // дата выполнения запроса
         const dateEl = document.querySelector('.currency__date')
@@ -33,10 +36,7 @@ async function init() {
         const tableBodyEl = document.querySelector('#tableBody')
         renderTable(currencyData, tableBodyEl)
 
-        const inputInEl = document.querySelector('#inputIn')
-        const inputOutEl = document.querySelector('#inputOut')
-
-        initEvents(currencyData, { selectInEl, selectOutEl, inputInEl, inputOutEl })
+        initEvents(currencyData)
     } catch (e) {
         console.error(e)
     }
