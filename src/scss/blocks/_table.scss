@@ -46,7 +46,8 @@
         padding: 22px 24px 21px 24px;
         border-bottom: 1px solid $color-slate-300;
         @include vp-1023 {
-            grid-column: 2 / -1;
+            //grid-column: 2 / -1;
+            display: block;
             padding: 0;
             border-bottom: 0;
             &:nth-child(odd) {
@@ -66,7 +67,7 @@
     &__td:first-child {
         padding-left: 0;
         @include vp-1023 {
-            padding-left: 14px;
+            padding-left: 24px;
         }
     }
 
@@ -77,14 +78,24 @@
         line-height: 16px;
         letter-spacing: 0%;
         @include vp-1023 {
-            padding: 20px 14px 19px 14px;
+            padding: 20px 14px 19px 24px;
             border-bottom: 1px solid $color-slate-300;
             font-size: 20px;
             line-height: 20px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+
+            &::before {
+                content: attr(data-label); // левый столбец
+            }
         }
         @include vp-359 {
             font-size: 16px;
-            padding: 20px 14px 19px 14px;
+            padding: 20px 14px 19px 24px;
             hyphens: auto;
         }
     }

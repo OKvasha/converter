@@ -15,6 +15,12 @@ export default function renderTable(data, tableBody) {
         const spanEl = getEl('span', 'table__flag')
         const svgEl = getSvgEl('table__flag-icon', 27, 20, `/__spritemap#sprite-${row.code.toUpperCase()}`)
 
+        // подписи для мобильной раскладки
+        tdIconEl.dataset.label = 'Код'
+        tdUnitEl.dataset.label = 'Единица'
+        tdNameEl.dataset.label = 'Валюта'
+        tdRateEl.dataset.label = 'Курс базовой валюты'
+
         spanEl.append(svgEl, row.code)
         tdIconEl.append(spanEl)
         trEl.append(tdIconEl, tdUnitEl, tdNameEl, tdRateEl)
