@@ -1,3 +1,5 @@
+import { getEl } from './elements'
+
 function close(dropdown, menu, toggle) {
     dropdown.classList.remove('is-open')
     menu.setAttribute('aria-hidden', 'true')
@@ -20,7 +22,11 @@ export default function dropdownSelect(dropdown) {
         item.addEventListener('click', () => {
             const name = item.querySelector('.form__select-name').textContent.trim()
             const code = item.querySelector('.form__select-code').textContent.trim()
-            toggle.textContent = `${name} ${code}`
+
+            const nameEl = getEl('span', 'form__select-toggle-name', `${name} `)
+            const codeEl = getEl('span', 'form__select-toggle-code', `${code}`)
+
+            toggle.replaceChildren(nameEl, codeEl)
             hidden.value = item.dataset.value
 
             menu.querySelector('.is-selected')?.classList.remove('is-selected')

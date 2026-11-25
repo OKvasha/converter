@@ -18,7 +18,8 @@ export default function initEvents(currencyData) {
         }
     }
 
-    document.querySelector('#refreshBtn').addEventListener('click', () => {
+    document.querySelector('#refreshBtn').addEventListener('click', (e) => {
+        e.preventDefault()
         refreshResult()
         updateResult(currencyData)
     })

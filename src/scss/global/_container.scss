@@ -1,5 +1,15 @@
+@use '../global/_mixins' as *;
+
 .container {
     max-width: 1000px;
     padding: 0 30px;
     margin: 0 auto;
+    @include vp-1023 {
+        max-width: 880px;
+    }
+
+    @include vp-359 {
+        padding: 0 22px;
+        max-width: 360px;
+    }
 }

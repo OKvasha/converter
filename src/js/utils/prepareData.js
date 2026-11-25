@@ -18,7 +18,7 @@ export default function prepareData(raw) {
 
     // Рубль — базовая валюта, его в ответе ЦБ нет, поэтому достраиваем сами
     rows.RUB = {
-        code: 'RUB',
+        code: 'RUR',
         name: 'Российский рубль',
         unit: 1,
         rate: 1,

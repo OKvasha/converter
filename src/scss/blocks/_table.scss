@@ -1,4 +1,5 @@
 @use '../global/_variables' as *;
+@use '../global/_mixins' as *;
 
 .table {
     width: 100%;
@@ -10,8 +11,15 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(118px, auto)) repeat(2, minmax(298px, auto));
 
+    @include vp-1023 {
+        grid-template-columns: 1fr 1fr;
+    }
+
     &__header {
         display: contents;
+        @include vp-1023 {
+            display: none;
+        }
     }
 
     &__header tr {
@@ -37,12 +45,19 @@
         grid-template-columns: subgrid;
         padding: 22px 24px 21px 24px;
         border-bottom: 1px solid $color-slate-300;
+        @include vp-1023 {
+            grid-column: 2 / -1;
+            padding: 0;
+            border-bottom: 0;
+            &:nth-child(odd) {
+                background-color: $color-slate-100;
+            }
+        }
     }
 
     &__th,
     &__td {
         padding-left: 20px;
-
         vertical-align: middle;
         text-align: left;
     }
@@ -50,6 +65,9 @@
     &__th:first-child,
     &__td:first-child {
         padding-left: 0;
+        @include vp-1023 {
+            padding-left: 14px;
+        }
     }
 
     &__td {
@@ -58,6 +76,17 @@
         font-size: 16px;
         line-height: 16px;
         letter-spacing: 0%;
+        @include vp-1023 {
+            padding: 20px 14px 19px 14px;
+            border-bottom: 1px solid $color-slate-300;
+            font-size: 20px;
+            line-height: 20px;
+        }
+        @include vp-359 {
+            font-size: 16px;
+            padding: 20px 14px 19px 14px;
+            hyphens: auto;
+        }
     }
 
     &__flag {

@@ -3,9 +3,7 @@ import fetchData from './js/services/fetchData'
 import prepareData from './js/utils/prepareData'
 import renderTable from './js/components/renderTable'
 import renderSelect from './js/components/renderSelect'
-
 import initEvents from './js/handlers/initEvents'
-import refreshResult from './js/handlers/refreshResult'
 
 async function init() {
     try {
