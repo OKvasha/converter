@@ -242,9 +242,26 @@
         bottom: 100px;
         width: 50px;
         height: 55px;
-        background: url('../../assets/images/sprite/icon-arrows.svg') no-repeat right center / 50px 55px;
+        //background: url('../../assets/images/sprite/icon-arrows.svg') no-repeat right center / 50px 55px;
+        background-color: transparent;
         border: unset;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-icon--tablet {
+            display: none;
+        }
+        &-icon--mobile {
+            display: none;
+        }
+        &:hover,
+        &:focus-visible {
+            color: $color-ocean-500;
+        }
+        &:active {
+            color: $color-slate-500;
+        }
         @include vp-1023 {
             width: 88px;
             height: 88px;
@@ -253,13 +270,25 @@
             top: 50%;
             box-shadow: 0px 5px 13px 0px rgba(192, 202, 214, 0.5);
             border-radius: 100%;
-            background: url('../../assets/images/sprite/icon-tablet-arrows.svg') no-repeat center center / 56px 56px;
+            //background: url('../../assets/images/sprite/icon-tablet-arrows.svg') no-repeat center center / 56px 56px;
+            &-icon--desktop {
+                display: none;
+            }
+            &-icon--tablet {
+                display: block;
+            }
         }
         @include vp-359 {
             width: 64px;
             height: 64px;
             transform: translate(-100%, -70%);
-            background: url('../../assets/images/sprite/icon-tablet-arrows.svg') no-repeat center center / 36px 36px;
+            &-icon--mobile {
+                display: block;
+            }
+            &-icon--tablet {
+                display: none;
+            }
+            //background: url('../../assets/images/sprite/icon-tablet-arrows.svg') no-repeat center center / 36px 36px;
         }
     }
 }
